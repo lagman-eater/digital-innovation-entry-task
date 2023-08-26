@@ -1,13 +1,90 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 70vw;
+    height: 110px;
+}
+
+.thead {
+    display: flex;
+    justify-content: space-around;
+    color: #959494;
+}
+
+.thead div {
+    font-size: 12px;
+}
+
+.tbody {
+    display: flex;
+    height: 100%;
+}
+
+.daysRow {
+    margin-top: 20px;
+    margin-right: 5px;
+    color: #959494;
+}
+
+.daysRow div {
+    height: 17px;
+    font-size: 12px;
+}
+
+.tdRow {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.sm {
+    background-color: #ACD5F2 !important;
+}
+
+.md {
+    background-color: #7FA8C9 !important;
+}
+
+.l {
+    background-color: #527BA0 !important;
+}
+
+.xl {
+    background-color: #254E77 !important;
+}
+
+.tdRow div {
+    width: 15px;
+    height: 15px;
+    margin: 1px;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+.tdRow div:hover > .span {
+  display: block;
+} 
+
+.span {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    top: 10px;
+    border-radius: 10px;
 }
